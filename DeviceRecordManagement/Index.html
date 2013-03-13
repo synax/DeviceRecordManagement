@@ -3,29 +3,49 @@
 <head>
 	<meta charset="utf-8">
 	<title>Device Record Management</title>
-	<link href="css/smoothness/jquery-ui-1.10.1.custom.css" rel="stylesheet">
+	<link href="css\red-grey\jquery-ui-1.9.1.custom.css" rel="stylesheet" type="text/css">	
+	<link href="DeviceRecordManagement.css" rel="stylesheet" type="text/css">	
 	<script src="js/jquery-1.9.1.js"></script>
-	<script src="js/jquery-ui-1.10.1.custom.js"></script>
-	<script src="DeviceRecordManagement.js"></script>
+	<script src="js/jquery-ui-1.10.1.custom.js"></script>	
+	<script src="DeviceRecordManagement.js"></script>	
 	<link href="KUO_CustomStyles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
-<h1 class="ui-widget">Device Record Manager</h1>
-
 <div class="ui-widget" id="effect">				
 				
 	<div class="ui-widget"  id="computernameconfig">
-			<h3 class="ui-widget-header">MAC Address:</h3>
-			<div class="ui-widget-content" id="locationconfigcontent">					
+				<div class="ui-widget">
+				<h4 style="padding: 0.7em;" class="ui-widget-header">Delete Device Record:</h4>
+				<div class="ui-widget-content">
+													
+					<div class="ui-state-highlight" style="margin: 10px; padding: 0.7em;"> 
+						<div style="margin: 10px; padding: 0.7em;"> 
+							<strong  style="font-weight:bold">MAC Address: </strong><input style="margin: 10px; padding: 0.7em; width: 250px;" type="text" id="macAddress"></input>	
+						</div>
+						<div style="margin: 10px; padding: 0.7em;"> 
+							<strong style="font-weight:bold">Device Name: </strong><span style="margin: 10px; padding: 0.7em;" id="deviceName"></span> 
+						</div>
+					</div>
+					
 				
-				<input style="margin: 10px; padding: 0.7em;height: 25px" type="Text" id="macAddress"/>
-							
-			</div>			
+					
+					<button disabled="disabled" style="margin: 10px; padding: 0.7em; width: 470px;" id="deleteButton" >Delete Record</button>
+					
+					<div id="removalResult" style="margin: 10px; padding: 0.7em;"> 
+						<strong style="font-weight:bold"></strong>
+					</div>
+					
+				</div>	
+				
+						
+			</div>	
+
+			
 			
 	</div>	
 	
-	<button id="deleteButton">Delete Record</button>
+	
 </div>
 
 </body>
