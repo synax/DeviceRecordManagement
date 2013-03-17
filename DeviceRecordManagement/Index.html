@@ -7,7 +7,7 @@
 	<link href="DeviceRecordManagement.css" rel="stylesheet" type="text/css">	
 	<script src="js/jquery-1.9.1.js"></script>
 	<script src="js/jquery-ui-1.10.1.custom.js"></script>	
-	<script src="DeviceRecordManagement.js"></script>	
+	<script src="DeviceRecordManagement.js"></script>
 	<link href="KUO_CustomStyles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -17,26 +17,80 @@
 	<div class="ui-widget"  id="computernameconfig">
 				<div class="ui-widget">
 				<h4 style="padding: 0.7em;" class="ui-widget-header">Delete Device Record:</h4>
-				<div class="ui-widget-content">
-													
-					<div class="ui-state-highlight" style="margin: 10px; padding: 0.7em;"> 
+				<div class="ui-widget-content" >
+				<div id="accordion" style="height:250px" >
+					<h3>Delete Record Using MAC Address</h3>
+									
+					<div class="ui-state-highlight" style="margin: 10px; padding: 0.7em;" id="contentWidgetMacAddress"> 
+						
 						<div style="margin: 10px; padding: 0.7em;"> 
-							<strong  style="font-weight:bold">MAC Address: </strong><input style="margin: 10px; padding: 0.7em; width: 250px;" type="text" id="macAddress"></input>	
-						</div>
-						<div style="margin: 10px; padding: 0.7em;"> 
-							<strong style="font-weight:bold">Device Name: </strong><span style="margin: 10px; padding: 0.7em;" id="deviceName"></span> 
-						</div>
+							<strong  style="margin: 5px; padding: 0.7em; font-weight:bold"  >MAC Address: </strong><input style="margin: 5px; padding: 0.7em;" type="text" id="macAddress"></input>	
+							<strong style="margin: 5px; padding: 0.7em; font-weight:bold"  >Computer Name: </strong><span style="margin: 5px; padding: 0.7em;" id="deviceName"></span> 
+						</div>		
+						<button disabled="disabled" style="margin: 10px; padding: 0.7em; width: 720px;" id="deleteButtonMac" >Delete Record</button>
+
 					</div>
 					
-				
+					<h3>Delete Record Using Computer Name</h3>
+					<div class="ui-state-highlight" style="margin: 10px; padding: 0.7em;" id="contentWidgetComputerName" > 
+						
+						<div> 
+							<strong  >Computer Name: </strong><input   style="margin: 5px; padding: 0.7em; font-weight:bold" id="resourceSelect"></input>	
+							<strong style="margin: 5px; padding: 0.7em; font-weight:bold"  >Resource ID: </strong><span style="margin: 5px; padding: 0.7em;" id="resourceID"></span> 				
+						</div>
+						<button disabled="disabled" style="margin: 10px; padding: 0.7em; width: 720px;" id="deleteButtonName" >Delete Record</button>
 					
-					<button disabled="disabled" style="margin: 10px; padding: 0.7em; width: 470px;" id="deleteButton" >Delete Record</button>
+					</div>				
+					
+					
+				</div>	
+					
+					
 					
 					<div id="removalResult" style="margin: 10px; padding: 0.7em;"> 
 						<strong style="font-weight:bold"></strong>
 					</div>
+				
+				
+				<h4 style="padding: 0.7em;" class="ui-widget-header">How-To:</h4>
+				<div class="ui-widget-content" >
+													
+					<div class="ui-state-highlight" style="margin: 10px; padding: 0.7em;" id="contentWidget"> 
+						<div style="margin: 10px; padding: 0.7em;">							
+							
+							
+							<strong>Step 1</strong>
+							<p>Enter the MAC Address for your client</p>
+							<strong >Step 2</strong>
+							<p>Wait till the client name apears. If no client name apears, the computer is not known to sccm...</p>
+							
+							
+						</div>						
 					
-				</div>	
+					</div>					
+				
+					<div class="ui-state-highlight" style="margin: 10px; padding: 0.7em;" id="contentWidget"> 
+					<div style="margin: 10px; padding: 0.7em;">							
+							
+							<strong>MAC Address:</strong>
+							<p>
+								Allowed format for MAC Address is "XX:XX:XX:XX:XX:XX". Wildcards are not allowed yet.								
+							</p>
+							<strong >URL:</strong>
+							<p>
+								Make sure you connect via the FQDN name "zrheae18.emea.kuoni.int". If you use the server name only, you will get an "error".							
+							</p>	
+							
+							
+						</div>						
+					
+					</div>	
+
+											
+				
+				
+					
+				</div>
 				
 						
 			</div>	

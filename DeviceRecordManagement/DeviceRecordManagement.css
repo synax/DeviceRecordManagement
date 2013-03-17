@@ -6,6 +6,10 @@
 	margin:10px;
 }
 
+.ui-autocomplete-loading {
+background: white url('images/ui-anim_basic_16x16.gif') right center no-repeat;
+}
+
 input:focus,textarea:focus,select:focus{
   border:1px solid #fafafa;
   -webkit-box-shadow:0 0 6px #007eff;
@@ -13,6 +17,19 @@ input:focus,textarea:focus,select:focus{
   box-shadow:0 0 5px #007eff;
   outline: none;
 }
+
+.ui-autocomplete {
+    max-height: 400px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+  }
+  /* IE 6 doesn't support max-height
+   * we use height instead, but this forces the menu to always be this tall
+   */
+  * html .ui-autocomplete {
+    height: 400px;
+  }
 
 
 .ui-combobox-toggle {
@@ -34,18 +51,21 @@ input:focus,textarea:focus,select:focus{
 
 .ui-combobox-input {
 	margin: 0;
-	width:430px;
+	width:730px;
 	height:30px;
 	font-size:10pt;
 	padding: 0.3em;
 }
 
-.toggler { width: 490px; height: 200px; position: relative; font-size:10pt; }
+.toggler { width: 790px; height: 200px; position: relative; font-size:10pt; }
 
 #RightWizardButtons { padding: .5em 1em; font-size:10pt; margin: 10px; padding: 0.7em; } 
 
 #effect {
-	width:490px;
+	width:790px;
+	margin-left: auto ;
+	margin-right: auto ;
+	text
 	margin: 5px;
 	font-size:10pt;
 	position:relative;
@@ -53,6 +73,5 @@ input:focus,textarea:focus,select:focus{
 	color: #808080;
 }
 
-#effect h3 { margin: 0; padding: 0.4em; text-align:left; font-size:12pt;}
 	
 #effect h4 { margin: 0; padding: 0.4em; text-align:left; font-size:12pt;}
